@@ -1,7 +1,8 @@
 <template>
   <v-app>
     <v-main>
-      <profile />
+      <size-menu></size-menu>
+      <!-- <profile /> -->
       <!-- <router-view /> -->
     </v-main>
   </v-app>
@@ -10,4 +11,5 @@
 <script setup>
 import { RouterView } from "vue-router";
 import Profile from "./components/Profile.vue";
+import SizeMenu from "./components/SizeMenu.vue";
 </script>

@@ -20,6 +20,7 @@ declare module 'vue' {
     Replies: typeof import('./src/components/Replies.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SizeMenu: typeof import('./src/components/SizeMenu.vue')['default']
     Tweet: typeof import('./src/components/Tweet.vue')['default']
   }
 }
