@@ -1,3 +1,20 @@
+<script setup lang="ts">
+import Highlights from "./Highlights.vue";
+import Likes from "./Likes.vue";
+import Media from "./Media.vue";
+import Replies from "./Replies.vue";
+import Tweet from "./Tweet.vue";
+
+const current_tab = ref(null);
+const tabList = [
+  { title: "Posts", value: "posts", component: Tweet },
+  { title: "Replies", value: "replies", component: Replies },
+  { title: "Highlights", value: "highlights", component: Highlights },
+  { title: "Media", value: "media", component: Media },
+  { title: "Likes", value: "likes", component: Likes },
+];
+</script>
+
 <template>
   <v-container class="w-50 pa-0">
     <v-img src="/vuemastery_header.png" height="300" cover></v-img>
@@ -43,6 +60,7 @@
         </v-col>
       </VRow>
 
+      <!--  -->
       <v-row class="pl-6">
         <v-col cols="auto">
           <h4>696 following</h4>
@@ -51,6 +69,27 @@
           <h4>24k followers</h4>
         </v-col>
       </v-row>
+      <!--  -->
+      <VTabs class="pl-6" v-model="current_tab">
+        <VTab
+          v-for="tab in tabList"
+          :key="tab.value"
+          :value="tab.value"
+          color="blue"
+        >
+          {{ tab.title }}
+        </VTab>
+      </VTabs>
+
+      <v-window v-model="current_tab">
+        <v-window-item
+          v-for="tab in tabList"
+          :value="tab.value"
+          :key="tab.value"
+        >
+          <component :is="tab.component" />
+        </v-window-item>
+      </v-window>
     </VContainer>
   </v-container>
 </template>
