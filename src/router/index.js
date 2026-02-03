@@ -23,6 +23,11 @@ const router = createRouter({
       name: "SizeMenuTreeView",
       component: () => import("../components/SizeMenuTreeView.vue"),
     },
+    {
+      path: "/books",
+      name: "BookTable",
+      component: () => import("../components/BookTable.vue"),
+    },
   ],
 });
 

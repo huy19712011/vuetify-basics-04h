@@ -20,8 +20,8 @@ const items = [
     id: 1,
     title: "Applications :",
     children: [
-      { id: 2, title: "Calendar : app", to: "/about" },
-      { id: 3, title: "Chrome : app" },
+      { id: 2, title: "About", to: "/about" },
+      { id: 3, title: "Books", to: "/books" },
       { id: 4, title: "Webstorm : app" },
     ],
   },
