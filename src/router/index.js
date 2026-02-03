@@ -18,6 +18,11 @@ const router = createRouter({
       name: "About",
       component: () => import("../pages/About.vue"),
     },
+    {
+      path: "/sizeMenuTreeView",
+      name: "SizeMenuTreeView",
+      component: () => import("../components/SizeMenuTreeView.vue"),
+    },
   ],
 });
 
